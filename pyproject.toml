@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "rule_enginee"
+version = "0.1.0"
+description = ""
+authors = ["RahulDas-dev <r.das699@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+xmltodict = "^0.13.0"
+jsonata-python = "^0.4.0"
+litellm = "^1.47.1"
+pydantic = "^2.9.2"
+anthropic = {extras = ["vertex"], version = "^0.34.2"}
+google-cloud-aiplatform = "^1.67.1"
+termcolor = "^2.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.1.1"
+pyclean = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = [
+    ".ruff_cache",
+    ".git",
+    ".ipynb_checkpoints",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "notebooks",
+    "aider"
+]
+extend-include = []
+line-length = 120
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+ignore = ["E731"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
