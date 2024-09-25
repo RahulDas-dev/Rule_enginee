@@ -9,14 +9,19 @@ class QueryDetails(BaseModel):
     query: str
 
 
-class Response(BaseModel):
+class QueryList(BaseModel):
+    items: List[QueryDetails] = Field(default_factory=list)
+
+
+class AgentResponse(BaseModel):
     model_config = ConfigDict(extra="ignore", frozen=True)
 
     response_string: str = Field(
         description="The response string to return to the user."
     )
     queries: List[QueryDetails] = Field(
-        description="The queries that were executed to generate the response."
+        description="The queries that were executed to generate the response.",
+        default_factory=list,
     )
 
     @classmethod
@@ -43,3 +48,12 @@ class Response(BaseModel):
             raise ValueError(err.message)
         finally:
             return cls(response_string=data, queries=queries)
+
+
+class ChatMessage(BaseModel):
+    role: str = Field(default="")
+    content: str = Field(default="")
+
+
+class ChatHistory(BaseModel):
+    data: List[ChatMessage] = Field(default_factory=list)

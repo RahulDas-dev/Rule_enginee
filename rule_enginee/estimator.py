@@ -1,6 +1,6 @@
 import logging
 from typing import Any, Dict, List, Optional
-from .response import QueryDetails
+from .schemas import QueryDetails
 from jsonata import Jsonata
 
 logger = logging.getLogger(__name__)

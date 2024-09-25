@@ -52,18 +52,3 @@ class RemovePrefix:
     ) -> Dict[str, Any] | OrderedDict[str, Any]:
         # Transform JSON data by adding prefix
         return RemovePrefix.add_prefix_to_keys(data, prefix)
-
-
-# Example usage:
-# transformer = Transformer()
-# input_data = {
-#     "sch:name": "John",
-#     "sch:details": {
-#         "sch:age": 30,
-#         "sch:city": "New York"
-#     }
-# }
-# transformed_data = transformer.transform(input_data)
-# print(transformed_data)
-# inverse_transformed_data = transformer.inverse_transform(transformed_data)
-# print(inverse_transformed_data)
