@@ -1,0 +1,12 @@
+RE_APP__HOST=127.0.0.1
+RE_APP__PORT=8000
+RE_APP__RELOAD=True
+RE_APP__DEBUG=True
+RE_APP__WORKERS_COUNT=3
+RE_APP__LOG_DIRECTORY=C:/Users/rdas6/OneDrive/Desktop/codespace/logs
+RE_DB__KIND="SQLITE"
+RE_DB__HOST='localhosts'
+RE_DB__PORT=5432
+RE_DB__DB_NAME=rule_enginee.db
+RE_DB__USERNAME='rahul'
+RE_DB__DB_LOGGER=False

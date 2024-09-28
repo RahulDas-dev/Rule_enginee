@@ -1,0 +1,16 @@
+{
+    "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+    }
+    },
+
+    "ruff.lint.args": [
+        "--config=pyproject.toml"
+    ],
+    "ruff.organizeImports": true,
+    "ruff.fixAll": true,
+    "ruff.lineLength": 120,
+    "editor.formatOnSave": true,
+}
